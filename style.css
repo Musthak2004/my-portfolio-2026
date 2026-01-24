@@ -28,5 +28,18 @@ nav ul li {
 .firstSection {
     display: flex;
     justify-content: space-around;
-    margin: 23px 0;
+    margin: 80px 0;
+}
+.firstSection > div{
+    width: 30%;
+}
+.leftSection {
+    font-size: 3rem;
+    margin: 30px 0;
+}
+.rightSection img{
+    width: 80%;
+}
+.purple {
+    
 }
