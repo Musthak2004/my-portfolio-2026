@@ -3,197 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Musthak | Full Stack Developer Portfolio</title>
+    <title>Your Name | Web Developer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Orbitron:wght@500;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Vanilla Tilt.js for 3D card tilt effect -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
   </head>
   <body>
-    <!-- Particles background -->
-    <div id="particles-js"></div>
-
-    <!-- Main content wrapper -->
-    <div class="wrapper">
-      <!-- Navigation -->
-      <nav class="navbar">
-        <div class="logo">Musthak</div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#service">Service</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Hero / Home -->
-      <section id="home" class="hero">
-        <div class="hero-content">
-          <h1>I Am Full Stack Developer</h1>
-          <p>Building modern, responsive & beautiful websites with passion</p>
-          <div class="hero-buttons">
-            <a href="#portfolio" class="btn primary">View Work</a>
-            <a href="#contact" class="btn secondary">Hire Me</a>
-          </div>
+    <!-- 3D Flip Container for Splash & Portfolio -->
+    <div class="flip-container">
+      <!-- Front: Splash Screen -->
+      <div class="front">
+        <div class="splash-content">
+          <h1>Welcome to My World</h1>
+          <button id="enter-btn" class="btn primary">Click Me to Enter</button>
         </div>
-      </section>
+      </div>
 
-      <!-- About -->
-      <section id="about" class="section fade-in-section about">
-        <h2>About Myself</h2>
-        <div class="about-content">
-          <p>
-            Hi, I'm <strong>Musthak</strong>, a passionate Full-Stack Web
-            Developer based in Dambulla. With 1 years of experience turning
-            ideas into clean, fast, and stunning websites.
-          </p>
-          <p>
-            I specialize in Python, Java, SQL, Django, Spring Boot, MongoDB,
-            MySQL, HTML, CSS, GIT and love creating smooth user experiences.
-          </p>
-        </div>
-      </section>
+      <!-- Back: Portfolio Content -->
+      <div class="back">
+        <!-- Particles background -->
+        <div id="particles-js"></div>
 
-      <!-- Services -->
-      <section id="service" class="section fade-in-section">
-        <h2>My Services</h2>
-        <div class="services-grid">
-          <div class="service-card">
-            <h3>Frontend Development</h3>
-            <p>
-              Responsive & interactive websites with React, Next.js, Tailwind,
-              animations.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>Backend & APIs</h3>
-            <p>
-              Django, Spring Boot, MySQL, MongoDB, REST/GraphQL APIs,
-              authentication.
-            </p>
-          </div>
-          <div class="service-card">
-            <h3>UI/UX Design</h3>
-            <p>Modern interfaces, Figma prototypes, user-friendly designs.</p>
-          </div>
-          <div class="service-card">
-            <h3>Maintenance & Optimization</h3>
-            <p>Speed improvements, SEO, bug fixes, updates.</p>
-          </div>
-        </div>
-      </section>
+        <div class="wrapper">
+          <!-- Navbar -->
+          <nav class="navbar">
+            <div class="logo">Musthak</div>
+            <ul class="nav-links">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#resume">Resume</a></li>
+              <li><a href="#portfolio">Portfolio</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
 
-      <!-- Resume -->
-      <section id="resume" class="section fade-in-section">
-        <h2>Resume</h2>
-        <div class="resume-content">
-          <h3>Experience</h3>
-          <ul>
-            <li>
-              <strong>2023 – Present</strong> | Frontend Developer – Built 20+
-              projects
-            </li>
-            <li>
-              <strong>2021 – 2023</strong> | Web Developer Intern – Company
-              website & dashboard
-            </li>
-          </ul>
-          <h3>Education</h3>
-          <p>B.Tech Computer Science, [Your University], 2018–2022</p>
-          <h3>Skills</h3>
-          <p>
-            HTML • CSS • JavaScript • React • Tailwind • Node.js • Git • Figma
-          </p>
-          <a href="#" class="btn primary" style="margin-top: 2rem"
-            >Download Resume (PDF)</a
-          >
-        </div>
-      </section>
-
-      <!-- Portfolio -->
-      <section id="portfolio" class="section fade-in-section">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-          <div class="portfolio-item">
-            <img
-              src="https://images.unsplash.com/photo-1555066931-bf19c0fd1085?w=800"
-              alt="Project"
-            />
-            <div class="overlay">
-              <h3>E-commerce Store</h3>
-              <p>React + Tailwind + Stripe</p>
+          <!-- Hero -->
+          <section id="home" class="hero">
+            <div class="hero-3d-container">
+              <div
+                class="floating-title"
+                data-tilt
+                data-tilt-max="20"
+                data-tilt-speed="400"
+                data-tilt-perspective="1200"
+              >
+                <h1>I Am <span>Full Stack Developer</span></h1>
+              </div>
             </div>
-          </div>
-          <div class="portfolio-item">
-            <img
-              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
-              alt="Project"
-            />
-            <div class="overlay">
-              <h3>Admin Dashboard</h3>
-              <p>Next.js + Charts + Dark Mode</p>
+            <div class="hero-content">
+              <p class="subtitle">
+                Crafting immersive & high-performance digital experiences
+              </p>
+              <div class="hero-buttons">
+                <a href="#portfolio" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn secondary">Get in Touch</a>
+              </div>
             </div>
-          </div>
-          <div class="portfolio-item">
-            <img src="Screenshot 2026-02-07 165933.png" alt="Project" />
-            <div class="overlay">
-              <h3>Personal Portfolio</h3>
-              <p>HTML/CSS/JS + Particles</p>
-            </div>
-          </div>
-          <div class="portfolio-item">
-            <img
-              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
-              alt="Project"
-            />
-            <div class="overlay">
-              <h3>Blog Platform</h3>
-              <p>React + Firebase</p>
-            </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      <!-- Blog -->
-      <section id="blog" class="section fade-in-section">
-        <h2>Latest Posts</h2>
-        <div class="blog-grid">
-          <div class="blog-card">
-            <h3>CSS Grid vs Flexbox in 2026</h3>
-            <p class="date">Jan 20, 2026</p>
-            <p>When to use which layout system...</p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-          <div class="blog-card">
-            <h3>Tailwind CSS Tips & Tricks</h3>
-            <p class="date">Dec 15, 2025</p>
-            <p>Advanced patterns I use daily...</p>
-            <a href="#" class="read-more">Read More →</a>
-          </div>
-        </div>
-      </section>
+          <!-- About -->
+          <section id="about" class="section fade-in-section">
+            <h2>About Me</h2>
+            <div
+              class="about-content tilt-card"
+              data-tilt
+              data-tilt-max="12"
+              data-tilt-speed="500"
+            >
+              <p>
+                Hi, I'm <strong>Your Name</strong> — a passionate web developer
+                specializing in modern frontend, creative animations, and 3D web
+                experiences.
+              </p>
+              <p>
+                I love building fast, beautiful, and interactive websites that
+                leave a lasting impression.
+              </p>
+            </div>
+          </section>
 
-      <!-- Contact -->
-      <section id="contact" class="section fade-in-section">
-        <h2>Get In Touch</h2>
-        <div class="contact-content">
-          <p>Have an idea? Let's make it happen!</p>
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea placeholder="Message..." rows="6" required></textarea>
-            <button type="submit" class="btn primary">Send Message</button>
-          </form>
-          <div class="social-links">
-            <a href="#">GitHub</a> • <a href="#">LinkedIn</a> •
-            <a href="#">Twitter</a>
-          </div>
+          <!-- Services -->
+          <section id="services" class="section fade-in-section">
+            <h2>What I Do</h2>
+            <div class="services-grid">
+              <div class="service-card tilt-card" data-tilt>
+                <h3>Frontend & 3D Web</h3>
+                <p>React • Three.js • GSAP • WebGL • Immersive interfaces</p>
+              </div>
+              <div class="service-card tilt-card" data-tilt>
+                <h3>Full-Stack Solutions</h3>
+                <p>Next.js • Node.js • TypeScript • APIs • Databases</p>
+              </div>
+              <div class="service-card tilt-card" data-tilt>
+                <h3>UI/UX & Motion</h3>
+                <p>Modern design • Animations • Prototyping in Figma</p>
+              </div>
+              <div class="service-card tilt-card" data-tilt>
+                <h3>Performance & SEO</h3>
+                <p>Optimization • Accessibility • Core Web Vitals</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Resume -->
+          <section id="resume" class="section fade-in-section">
+            <h2>Resume</h2>
+            <div class="resume-content tilt-card" data-tilt>
+              <h3>Experience</h3>
+              <ul>
+                <li>
+                  <strong>2023 – Present</strong> — Frontend / Full-Stack
+                  Developer
+                </li>
+                <li><strong>2021 – 2023</strong> — Web Development Intern</li>
+              </ul>
+              <h3>Education</h3>
+              <p>B.Tech in Computer Science — [Your University], 2018–2022</p>
+              <h3>Skills</h3>
+              <p>
+                HTML • CSS • JavaScript • React • Next.js • Tailwind • Three.js
+                • Node.js • Git
+              </p>
+              <a href="#" class="btn primary" style="margin-top: 2rem"
+                >Download CV</a
+              >
+            </div>
+          </section>
+
+          <!-- Portfolio -->
+          <section id="portfolio" class="section fade-in-section">
+            <h2>Portfolio</h2>
+            <div class="portfolio-grid">
+              <div class="portfolio-item tilt-card" data-tilt>
+                <img
+                  src="https://images.unsplash.com/photo-1555066931-bf19c0fd1085?w=800"
+                  alt="Project"
+                />
+                <div class="overlay">
+                  <h3>3D Product Showcase</h3>
+                  <p>Three.js • React</p>
+                </div>
+              </div>
+              <div class="portfolio-item tilt-card" data-tilt>
+                <img
+                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+                  alt="Project"
+                />
+                <div class="overlay">
+                  <h3>Interactive Dashboard</h3>
+                  <p>Next.js • Charts</p>
+                </div>
+              </div>
+              <div class="portfolio-item tilt-card" data-tilt>
+                <img
+                  src="https://images.unsplash.com/photo-1551650975-60cb5d8a4270?w=800"
+                  alt="Project"
+                />
+                <div class="overlay">
+                  <h3>Creative Portfolio</h3>
+                  <p>GSAP • Particles</p>
+                </div>
+              </div>
+              <div class="portfolio-item tilt-card" data-tilt>
+                <img
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+                  alt="Project"
+                />
+                <div class="overlay">
+                  <h3>Blog Platform</h3>
+                  <p>React • Firebase</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Blog -->
+          <section id="blog" class="section fade-in-section">
+            <h2>Recent Thoughts</h2>
+            <div class="blog-grid">
+              <div class="blog-card tilt-card" data-tilt>
+                <h3>Exploring WebGPU in 2026</h3>
+                <p class="date">February 2026</p>
+                <p>The next frontier after WebGL...</p>
+                <a href="#" class="read-more">Read →</a>
+              </div>
+              <div class="blog-card tilt-card" data-tilt>
+                <h3>Why I Love Three.js</h3>
+                <p class="date">January 2026</p>
+                <p>Creating magic on the web...</p>
+                <a href="#" class="read-more">Read →</a>
+              </div>
+            </div>
+          </section>
+
+          <!-- Contact -->
+          <section id="contact" class="section fade-in-section">
+            <h2>Let's Connect</h2>
+            <div class="contact-content tilt-card" data-tilt>
+              <p>Got a project or just want to chat? Drop a message!</p>
+              <form class="contact-form">
+                <input type="text" placeholder="Your Name" required />
+                <input type="email" placeholder="Your Email" required />
+                <textarea
+                  placeholder="Your Message"
+                  rows="5"
+                  required
+                ></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+              </form>
+              <div class="social-links">
+                <a href="#">GitHub</a> • <a href="#">LinkedIn</a> •
+                <a href="#">Twitter/X</a>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+      </div>
     </div>
 
     <!-- tsParticles -->
@@ -207,21 +238,21 @@
         fullScreen: { enable: true, zIndex: -1 },
         background: { color: { value: "transparent" } },
         particles: {
-          number: { value: 80, density: { enable: true, value_area: 800 } },
-          color: { value: "#ffffff" },
+          number: { value: 70, density: { enable: true, value_area: 800 } },
+          color: { value: "#a5b4fc" },
           shape: { type: "circle" },
-          opacity: { value: 0.5 },
-          size: { value: 3, random: true },
+          opacity: { value: 0.45, random: true },
+          size: { value: { min: 1, max: 4 } },
           line_linked: {
             enable: true,
-            distance: 150,
-            color: "#ffffff",
-            opacity: 0.4,
+            distance: 160,
+            color: "#a5b4fc",
+            opacity: 0.35,
             width: 1,
           },
           move: {
             enable: true,
-            speed: 2,
+            speed: 1.5,
             direction: "none",
             random: false,
             out_mode: "out",
@@ -233,7 +264,7 @@
             onclick: { enable: true, mode: "push" },
           },
           modes: {
-            grab: { distance: 140, line_linked: { opacity: 1 } },
+            grab: { distance: 140, line_linked: { opacity: 0.7 } },
             push: { particles_nb: 4 },
           },
         },
@@ -241,10 +272,17 @@
       });
     </script>
 
-    <!-- Scroll Fade-in Animation -->
+    <!-- JS for 3D Flip, Fade-in, Tilt -->
     <script>
-      const fadeElements = document.querySelectorAll(".fade-in-section");
+      // 3D Flip on button click
+      const enterBtn = document.getElementById("enter-btn");
+      const flipContainer = document.querySelector(".flip-container");
+      enterBtn.addEventListener("click", () => {
+        flipContainer.classList.add("flipped");
+      });
 
+      // Fade-in sections
+      const fadeSections = document.querySelectorAll(".fade-in-section");
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -253,10 +291,26 @@
             }
           });
         },
-        { threshold: 0.1 },
+        { threshold: 0.12 },
       );
+      fadeSections.forEach((section) => observer.observe(section));
 
-      fadeElements.forEach((el) => observer.observe(el));
+      // Initialize Vanilla Tilt for 3D cards
+      VanillaTilt.init(document.querySelectorAll(".tilt-card"), {
+        max: 15,
+        speed: 600,
+        glare: true,
+        "max-glare": 0.35,
+        perspective: 1100,
+        scale: 1.02,
+      });
+
+      // Initialize tilt for floating title
+      VanillaTilt.init(document.querySelectorAll(".floating-title"), {
+        max: 20,
+        speed: 400,
+        perspective: 1200,
+      });
     </script>
   </body>
 </html>
