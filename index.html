@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Musthak | Fll Stack Developer</title>
+    <title>Musthak | Full Stack Developer</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -81,6 +81,7 @@
         position: relative;
         background: #fff;
         overflow: hidden;
+        perspective: 1200px;
       }
       .hero-text h1 {
         font-size: 5.5rem;
@@ -109,11 +110,17 @@
       .hero-image {
         justify-self: end;
         max-width: 580px;
+        transform-style: preserve-3d;
+        transition: transform 0.6s ease;
+      }
+      .hero-image:hover {
+        transform: rotateY(8deg) rotateX(5deg) scale(1.05);
       }
       .hero-image img {
         width: 100%;
         filter: grayscale(100%);
         border-radius: 8px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
       }
       .hero-shape {
         position: absolute;
@@ -144,70 +151,218 @@
         grid-template-columns: 1fr 1fr;
         gap: 80px;
         align-items: center;
+        perspective: 1000px;
+      }
+      .about-text {
+        background: #fff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .about-text:hover {
+        transform: translateZ(40px) rotateX(3deg) rotateY(4deg);
       }
       .about-text p {
-        font-size: 1.15rem;
+        font-size: 1.18rem;
+        margin-bottom: 1.6rem;
+      }
+      .skills {
+        background: #fff;
+        padding: 40px;
+        border-radius: 16px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+      .skills:hover {
+        transform: translateZ(50px) rotateX(4deg) rotateY(-5deg);
+      }
+      .skills h3 {
         margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+      }
+      .skills ul li {
+        font-size: 1.1rem;
+        margin-bottom: 0.9rem;
+        position: relative;
+        padding-left: 25px;
+      }
+      .skills ul li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #222;
+        font-size: 1.4rem;
       }
 
-      /* Portfolio */
+      /* Portfolio - Modernized */
       .projects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-        gap: 30px;
+        gap: 40px;
+        perspective: 1400px;
       }
       .project-card {
         background: #fff;
-        border-radius: 12px;
+        border-radius: 16px;
         overflow: hidden;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-        transition: transform 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
         transform-style: preserve-3d;
+        position: relative;
       }
       .project-card:hover {
-        transform: translateY(-25px) rotateX(8deg) rotateY(8deg);
+        transform: translateY(-25px) rotateX(10deg) rotateY(10deg) scale(1.04);
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2);
       }
       .project-image {
-        height: 220px;
+        height: 240px;
         background-size: cover;
         background-position: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .project-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.6),
+          transparent 50%
+        );
+        opacity: 0;
+        transition: opacity 0.4s;
+      }
+      .project-card:hover .project-image::after {
+        opacity: 1;
       }
       .project-info {
-        padding: 25px;
+        padding: 30px 25px;
       }
       .project-info h3 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
+        font-size: 1.5rem;
+        margin-bottom: 12px;
+        color: #111;
+      }
+      .project-info p {
+        color: #555;
+        margin-bottom: 20px;
+        font-size: 1rem;
+      }
+      .project-links {
+        display: flex;
+        gap: 15px;
       }
       .project-links a {
-        display: inline-block;
-        margin-right: 15px;
-        padding: 8px 18px;
+        padding: 10px 22px;
         background: #222;
-        color: #fff;
-        border-radius: 6px;
-        font-size: 0.9rem;
-        margin-top: 15px;
+        color: white;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        transition: all 0.3s;
+      }
+      .project-links a:hover {
+        background: #444;
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
       }
 
-      /* Contact */
+      /* Contact - With Form */
+      .contact-content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      .contact-info {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        color: #444;
+      }
+      .contact-form {
+        background: #fff;
+        padding: 50px 40px;
+        border-radius: 20px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+        perspective: 1000px;
+      }
+      .contact-form:hover {
+        transform: translateZ(60px);
+      }
+      .form-group {
+        margin-bottom: 25px;
+        text-align: left;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: #333;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 14px 18px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        font-size: 1rem;
+        transition: all 0.3s;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #555;
+        box-shadow: 0 0 0 4px rgba(34, 34, 34, 0.1);
+      }
+      .form-group textarea {
+        min-height: 140px;
+        resize: vertical;
+      }
+      .submit-btn {
+        background: #222;
+        color: white;
+        border: none;
+        padding: 14px 40px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.4s;
+      }
+      .submit-btn:hover {
+        background: #444;
+        transform: translateY(-4px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
       .social-links {
         display: flex;
         justify-content: center;
-        gap: 30px;
-        margin-top: 40px;
-        font-size: 2.2rem;
+        gap: 40px;
+        margin-top: 60px;
+        font-size: 2.6rem;
+      }
+      .social-links a {
+        color: #222;
+        transition: all 0.4s ease;
+        transform-style: preserve-3d;
       }
       .social-links a:hover {
-        transform: scale(1.25);
+        color: #555;
+        transform: translateY(-12px) rotateX(25deg) rotateY(25deg) scale(1.35);
       }
 
       footer {
         text-align: center;
-        padding: 40px;
+        padding: 50px 8%;
         background: #111;
-        color: #ddd;
-        font-size: 0.9rem;
+        color: #ccc;
+        font-size: 0.95rem;
+        margin-top: 80px;
       }
 
       /* Responsive */
@@ -232,6 +387,9 @@
         }
         .about-content {
           grid-template-columns: 1fr;
+        }
+        .contact-form {
+          padding: 40px 25px;
         }
       }
       @media (max-width: 768px) {
@@ -260,6 +418,10 @@
         .hero-text h1 {
           font-size: 3.8rem;
         }
+        .social-links {
+          gap: 30px;
+          font-size: 2.2rem;
+        }
       }
     </style>
   </head>
@@ -286,8 +448,7 @@
         >
       </div>
       <div class="hero-image" data-aos="fade-left">
-        <img src="" alt="Musthak" />
-        <!-- உன் photo URL இங்க போடு (grayscale automatic-ஆ வரும்) -->
+        <img src="#" alt="Musthak" />
       </div>
       <div class="hero-shape"></div>
     </section>
@@ -297,19 +458,29 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            நண்பா, இங்க உன் about எழுதிக்கோ... நீ யாரு, என்ன பண்ற, experience,
-            passion எல்லாம்.
+            Hi buddy! I'm Musthak, a passionate Full Stack Developer with
+            experience in building modern, scalable web applications. I love
+            turning ideas into clean, performant code.
           </p>
-          <p>Clean-ஆ neat-ஆ இருக்கும், நீ content மட்டும் change பண்ணு.</p>
+          <p>
+            My expertise lies in both frontend (React, Tailwind) and backend
+            (Django, Node.js, Spring Boot), and I enjoy creating user-friendly
+            interfaces with solid architecture behind them.
+          </p>
+          <p>
+            Always learning new tech, open for freelance & collaboration
+            opportunities!
+          </p>
         </div>
         <div class="skills">
           <h3>Skills</h3>
           <ul>
             <li>Python, Java</li>
-            <li>Django, Spring Boot and React</li>
+            <li>Django, Spring Boot & React</li>
             <li>Node.js / Express</li>
-            <li>Tailwind / Bootstrap</li>
+            <li>Tailwind CSS / Bootstrap</li>
             <li>Git & GitHub</li>
+            <li>REST APIs, Databases (MySQL, MongoDB)</li>
           </ul>
         </div>
       </div>
@@ -318,16 +489,39 @@
     <section id="portfolio">
       <h2 class="section-title" data-aos="fade-up">Portfolio</h2>
       <div class="projects-grid">
-        <div class="project-card" data-aos="fade-up">
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
           <div
             class="project-image"
             style="
-              background-image: url(&quot;https://via.placeholder.com/600x400&quot;);
+              background-image: url(&quot;https://via.placeholder.com/600x400/222/fff?text=Project+1&quot;);
             "
           ></div>
           <div class="project-info">
-            <h3>Project Title 1</h3>
-            <p>Short description... React, Tailwind, etc.</p>
+            <h3>E-Commerce Platform</h3>
+            <p>
+              Full-stack online store with React frontend, Django backend,
+              payment integration & admin dashboard.
+            </p>
+            <div class="project-links">
+              <a href="#">Live Demo</a>
+              <a href="#">Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+          <div
+            class="project-image"
+            style="
+              background-image: url(&quot;https://via.placeholder.com/600x400/333/fff?text=Project+2&quot;);
+            "
+          ></div>
+          <div class="project-info">
+            <h3>Task Management App</h3>
+            <p>
+              Modern task tracker built with React + Node.js/Express + MongoDB.
+              Real-time updates with Socket.io.
+            </p>
             <div class="project-links">
               <a href="#">Live Demo</a>
               <a href="#">Source Code</a>
@@ -339,12 +533,55 @@
 
     <section id="contact" data-aos="fade-up">
       <h2 class="section-title">Get In Touch</h2>
-      <p>musthakcool55@gmail.com | +94717541444</p>
-      <div class="social-links">
-        <a href="#"><i class="fab fa-linkedin"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
+      <div class="contact-content">
+        <p class="contact-info">
+          Have a project in mind? Let's talk! Fill the form below or reach me
+          directly.
+        </p>
+
+        <form
+          class="contact-form"
+          action="https://formspree.io/f/your-form-id"
+          method="POST"
+        >
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="example@email.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Hi Musthak, I would like to discuss..."
+              required
+            ></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+        <div class="social-links">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
       </div>
     </section>
 
@@ -368,9 +605,15 @@
         loop: true,
       });
 
-      // Mobile menu toggle
       document.querySelector(".menu-toggle").addEventListener("click", () => {
         document.querySelector(".nav-links").classList.toggle("open");
+      });
+
+      VanillaTilt.init(document.querySelector(".hero-image"), {
+        max: 15,
+        speed: 400,
+        glare: true,
+        "max-glare": 0.4,
       });
     </script>
   </body>
