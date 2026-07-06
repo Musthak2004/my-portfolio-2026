@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Musthak | Portfolio</title>
-    <meta name="description" content="Musthak — Software Engineering student skilled in Python, Java, C++, Django, and full-stack web development. View projects, skills, and get in touch." />
-    <meta name="keywords" content="Musthak, Software Engineering, Python, Django, Java, C++, Full Stack Developer, Portfolio, Sri Lanka" />
-    <meta name="author" content="Musthak" />
+    <meta name="description" content="Musthak — Software Engineering student at ESOFT Metro Campus, Sri Lanka. Python & Django developer skilled in REST APIs, Stripe, DRF, PostgreSQL, and full-stack web development. View projects, skills, certifications, and get in touch." />
+    <meta name="keywords" content="Musthak, R.M. Musthak, Software Engineering, Python, Django, DRF, REST API, Java, C++, Full Stack Developer, Portfolio, Sri Lanka, ESOFT Metro Campus" />
+    <meta name="author" content="R.M. Musthak" />
     <meta property="og:title" content="Musthak | Portfolio" />
-    <meta property="og:description" content="Software Engineering student skilled in Python, Java, C++, Django, and full-stack development." />
+    <meta property="og:description" content="Software Engineering student at ESOFT Metro Campus — Python, Django, REST APIs, and full-stack development. Explore projects, skills, and certifications." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://musthak.me" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%237c5cfc'>M</text></svg>" />
@@ -140,6 +140,7 @@
         letter-spacing: 2px;
         background: linear-gradient(135deg, var(--accent), var(--accent2));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       nav ul {
@@ -230,6 +231,7 @@
           var(--accent2) 100%
         );
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
         display: block;
       }
@@ -346,6 +348,7 @@
         font-weight: 800;
         background: linear-gradient(135deg, var(--accent), var(--accent2));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .hero-badge .label {
@@ -467,6 +470,33 @@
       .about-card p:last-child {
         margin-bottom: 0;
       }
+      .about-subtitle {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+        margin: 1.8rem 0 0.6rem;
+      }
+      .about-list {
+        list-style: none;
+        padding: 0;
+        margin-bottom: 1rem;
+      }
+      .about-list li {
+        color: var(--muted);
+        line-height: 1.8;
+        font-size: 1rem;
+        padding-left: 1.2rem;
+        position: relative;
+      }
+      .about-list li::before {
+        content: "▸";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+      }
+      .about-list li strong {
+        color: var(--text);
+      }
 
       .skills-card {
         background: var(--surface);
@@ -488,6 +518,7 @@
         margin-bottom: 24px;
         background: linear-gradient(135deg, var(--accent), var(--accent2));
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
       }
       .skill-tag {
@@ -537,6 +568,9 @@
       }
       .project-card:nth-child(3) {
         animation-delay: 0.3s;
+      }
+      .project-card:nth-child(4) {
+        animation-delay: 0.45s;
       }
       @keyframes fadeUp {
         to {
@@ -919,7 +953,8 @@
         <h2><span class="typed"></span></h2>
         <div class="hero-cta">
           <a href="#contact" class="btn-primary">Let's Talk</a>
-          <a href="Musthak_CV.pdf" class="btn-outline" download>Download CV</a>
+          <a href="Musthak_Resume.docx" class="btn-outline" download>Download Resume</a>
+          <a href="https://github.com/Musthak2004" target="_blank" class="btn-outline">View GitHub</a>
         </div>
       </div>
 
@@ -938,12 +973,8 @@
         </div>
         <div class="hero-frame">
           <img
-            src="#"
-            alt="Musthak"
-            onerror="
-              this.src =
-                'https://via.placeholder.com/360x440/0e0e1a/7c5cfc?text=M'
-            "
+            src="WhatsApp%20Image%202026-03-01%20at%2012.16.25.jpeg"
+            alt="Musthak — Software Engineering Student"
           />
           <div class="hero-frame-overlay"></div>
         </div>
@@ -961,34 +992,126 @@
       <div class="about-grid">
         <div class="about-card">
           <p>
-            I'm Musthak — a Software Engineering student passionate about building
-            robust, scalable applications. I specialize in Python, Java, and C++
-            development with strong expertise in Django for web applications and
-            REST API design.
+            I'm <strong>R.M. Musthak</strong> — a Software Engineering student at
+            <strong>ESOFT Metro Campus, Sri Lanka</strong> (2025–2028) and a
+            self-taught developer passionate about building robust, scalable
+            applications. I specialize in <strong>Python, Django, and REST API
+            design</strong>, with experience across the full stack.
           </p>
           <p>
-            My experience spans both frontend and backend development, with
-            hands-on projects ranging from video streaming platforms to hotel
-            booking systems. I focus on writing clean, maintainable code and
-            following software engineering best practices.
+            My hands-on projects range from video streaming platforms and
+            e-commerce systems with Stripe payment integration to hotel booking
+            engines with race-condition-safe transactions and doctor appointment
+            platforms with multi-role access control. I focus on writing clean,
+            maintainable code and following software engineering best practices —
+            each project includes comprehensive automated testing.
           </p>
+
+          <h4 class="about-subtitle">🎓 Education</h4>
+          <ul class="about-list">
+            <li><strong>BSc in Software Engineering</strong> — ESOFT Metro Campus, Sri Lanka (2025 – Present)</li>
+            <li><strong>G.C.E. Advanced Level (Mathematics)</strong> — Ilmiyan Academy of Science (2020)</li>
+          </ul>
+
+          <h4 class="about-subtitle">📜 Certifications</h4>
+          <ul class="about-list">
+            <li>Claude Code Full Course — AI-Assisted Development</li>
+            <li>Level 3 IT Diploma — Software Development &amp; IT Fundamentals</li>
+            <li>English Diploma — Professional Communication</li>
+            <li>ESOFT Metro Campus — Technical Certifications &amp; Training</li>
+          </ul>
+
           <p>
-            I'm currently seeking internship and entry-level opportunities where
-            I can contribute to real-world projects and grow as a developer.
+            I continuously learn through self-study, official documentation, and
+            real-world project building. I'm currently seeking
+            <strong>internship and entry-level opportunities</strong> as a
+            Software Engineer, Python/Django Developer, or Backend Developer.
           </p>
         </div>
         <div class="skills-card">
-          <h3>Tech Stack</h3>
+          <h3>Languages</h3>
           <div>
             <span class="skill-tag">Python</span>
             <span class="skill-tag">Java</span>
-            <span class="skill-tag">C++</span>
             <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Django</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Git & GitHub</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
           </div>
+        </div>
+      </div>
+
+      <div class="about-grid" style="margin-top: 30px;">
+        <div class="skills-card">
+          <h3>Frameworks &amp; Libraries</h3>
+          <div>
+            <span class="skill-tag">Django 6.0</span>
+            <span class="skill-tag">Django REST Framework</span>
+            <span class="skill-tag">Bootstrap 5</span>
+          </div>
+        </div>
+        <div class="skills-card">
+          <h3>Databases</h3>
+          <div>
+            <span class="skill-tag">SQLite</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-grid" style="margin-top: 30px;">
+        <div class="skills-card">
+          <h3>Tools &amp; Platforms</h3>
+          <div>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Stripe</span>
+            <span class="skill-tag">Cloudinary</span>
+            <span class="skill-tag">Gunicorn</span>
+            <span class="skill-tag">WhiteNoise</span>
+            <span class="skill-tag">PythonAnywhere</span>
+          </div>
+        </div>
+        <div class="skills-card">
+          <h3>Core Concepts</h3>
+          <div>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">Data Structures &amp; Algorithms</span>
+            <span class="skill-tag">REST API Design</span>
+            <span class="skill-tag">MVC / MVT</span>
+            <span class="skill-tag">Authentication &amp; Authorization</span>
+            <span class="skill-tag">Database Design</span>
+            <span class="skill-tag">Unit &amp; Integration Testing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── LANGUAGES & SOFT SKILLS ── -->
+      <div style="margin-top: 60px;">
+        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 24px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Languages</h3>
+        <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 28px; flex: 1; min-width: 160px; text-align: center;">
+            <div style="font-size: 1.2rem; font-weight: 700; margin-bottom: 4px;">English</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 0.78rem; color: var(--muted);">Professional</div>
+          </div>
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 28px; flex: 1; min-width: 160px; text-align: center;">
+            <div style="font-size: 1.2rem; font-weight: 700; margin-bottom: 4px;">සිංහල</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 0.78rem; color: var(--muted);">Native</div>
+          </div>
+          <div style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 28px; flex: 1; min-width: 160px; text-align: center;">
+            <div style="font-size: 1.2rem; font-weight: 700; margin-bottom: 4px;">தமிழ்</div>
+            <div style="font-family: 'Space Mono', monospace; font-size: 0.78rem; color: var(--muted);">Native</div>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.3rem; font-weight: 700; margin: 32px 0 20px; background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Soft Skills</h3>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <span class="skill-tag" style="color: var(--text); border-color: rgba(255,255,255,0.12);">Problem Solving</span>
+          <span class="skill-tag" style="color: var(--text); border-color: rgba(255,255,255,0.12);">Attention to Detail</span>
+          <span class="skill-tag" style="color: var(--text); border-color: rgba(255,255,255,0.12);">Self-Learning</span>
+          <span class="skill-tag" style="color: var(--text); border-color: rgba(255,255,255,0.12);">Team Collaboration</span>
+          <span class="skill-tag" style="color: var(--text); border-color: rgba(255,255,255,0.12);">Analytical Thinking</span>
         </div>
       </div>
     </section>
@@ -1112,6 +1235,40 @@
             </div>
           </div>
         </div>
+
+        <div class="project-card">
+          <div
+            class="project-image"
+            style="background-image: url(&quot;hotel-booking-app.png&quot;); background-position: center top;"
+          >
+            <div class="project-image-overlay"></div>
+            <div class="project-num">04</div>
+          </div>
+          <div class="project-info">
+            <h3>DocBook — Doctor Appointment System</h3>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Django 6.0</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">HTML/CSS/JS</span>
+            </div>
+            <p>
+              A three-role (Patient, Doctor, Admin) healthcare platform with
+              role-specific dashboards, reusable access control mixins, appointment
+              scheduling with real-time availability validation and double-booking
+              prevention, and digital prescriptions with inline medication items.
+              Backed by 173 automated tests across 8 apps.
+            </p>
+            <div class="project-links">
+              <a
+                target="_blank"
+                href="https://github.com/Musthak2004/DocBook-Doctor-Appointment-System"
+                class="link-code"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1127,16 +1284,20 @@
             opportunities. Let's create something great together!
           </p>
           <div class="contact-detail">
-            <i class="fas fa-envelope"></i> musthak.dev@email.com
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:musthakcool55@gmail.com" style="color: inherit; text-decoration: none;">musthakcool55@gmail.com</a>
           </div>
           <div class="contact-detail">
-            <i class="fas fa-map-marker-alt"></i> Sri Lanka
+            <i class="fas fa-phone"></i>
+            <a href="tel:+94775231660" style="color: inherit; text-decoration: none;">+94 775 231 660</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i> Dambulla, Sri Lanka
           </div>
           <div class="social-links">
-            <a href="https://www.linkedin.com/in/musthak" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://linkedin.com/in/rm-musthak" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             <a href="https://github.com/Musthak2004" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:musthakcool55@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
 
@@ -1191,8 +1352,8 @@
         strings: [
           "Software Engineering Student.",
           "Python & Django Developer.",
-          "Java / C++ Programmer.",
-          "Open to Work.",
+          "REST API & DRF Developer.",
+          "Open to Opportunities.",
         ],
         typeSpeed: 65,
         backSpeed: 40,
